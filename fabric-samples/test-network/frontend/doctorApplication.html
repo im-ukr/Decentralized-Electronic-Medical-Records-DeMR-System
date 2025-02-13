@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f7fa; 
+        color: #333;
+        margin: 0;
+        scroll-behavior: smooth; 
+      }
+
+      .navbar {
+        background-color: #2c3e50; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar .navbar-brand {
+        color: white;
+        font-weight: 700;
+        font-size: 24px;
+      }
+
+      .navbar .navbar-nav .nav-link {
+        color: white;
+        font-weight: 500;
+        transition: color 0.3s;
+        text-decoration: none; 
+      }
+
+      .navbar .navbar-nav .nav-link:hover,
+      .navbar .navbar-nav .nav-item.active .nav-link {
+        color: #f39c12; 
+      }
+
+      .jumbotron {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px 20px; 
+        border-radius: 0;
+        margin-bottom: 0; 
+        animation: fadeIn 1s ease-in-out; 
+      }
+
+      .jumbotron .display-4 {
+        font-size: 30px; 
+        font-weight: 700;
+        animation: slideInDown 1s ease-in-out; 
+      }
+
+      .jumbotron .lead {
+        font-size: 18px;
+        font-weight: 400;
+        animation: slideInUp 1s ease-in-out; 
+      }
+
+      .custom-card {
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: -30px; 
+        animation: fadeInUp 1s ease-in-out; 
+      }
+
+      .register-text {
+        color: #2c3e50; 
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .form-label {
+        color: #2c3e50; 
+      }
+
+      .submit-btn {
+        background-color: #f39c12; 
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        width: 100%; 
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 12px 25px;
+        border-radius: 30px;
+        transition: background-color 0.3s, color 0.3s; 
+        margin-top: 20px; 
+      }
+
+      .submit-btn:hover {
+        background-color: #e67e22; 
+        color: white; 
+      }
+
+      .submit-btn:focus,
+      .submit-btn:focus-visible {
+        background-color: #004040; 
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        transform: translateY(4px);
+      }
+
+      .form-control,
+      .form-select {
+        border-radius: 30px; 
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #f39c12; 
+        box-shadow: 0 0 5px rgba(243, 156, 18, 0.5); 
+      }
+
+      .card-body {
+        padding: 40px; 
+      }
+
+      .card-title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .card hr {
+        border-top: 2px solid #f39c12; 
+        width: 50%;
+        margin: 20px auto;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <title>Doctor Application</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">🩺DeMR</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="adminApplication.html"
+                >Admin Application</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="patientApplication.html"
+                >Patient Application</a
+              >
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="doctorApplication.html"
+                >Doctor Application <span class="sr-only"></span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron Section -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-4" style="padding-top: 20px">
+          Doctor Application Portal
+        </h1>
+        <p class="lead">
+          Our Doctor application allows you to add and view EMR of a patient.
+        </p>
+      </div>
+    </div>
+
+    <!-- Info Cards Section -->
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card text-center custom-card shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title register-text">Add EMR</h5>
+              <hr />
+              <form method="POST" id="addEMRFDoctor">
+                <div class="mb-3 row">
+                  <label
+                    for="userEmail"
+                    class="col-sm-4 col-form-label form-label"
+                    >Patient Email-id</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="email"
+                      placeholder="Enter patient email"
+                      name="email"
+                      id="userEmail"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label
+                    for="doctorEmail"
+                    class="col-sm-4 col-form-label form-label"
+                    >Doctor Email-id</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="email"
+                      placeholder="Enter doctor email"
+                      name="email"
+                      id="doctorEmail"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label for="emrID" class="col-sm-4 col-form-label form-label"
+                    >EMR ID</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      placeholder="Enter EMR ID"
+                      name="EMR ID"
+                      id="emrID"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <label for="emr" class="col-sm-4 col-form-label form-label"
+                    >Enter the EMR</label
+                  >
+                  <div class="col-sm-8">
+                    <textarea
+                      style="text-align: center"
+                      type="text"
+                      placeholder="EMR"
+                      name="email"
+                      id="emr"
+                      class="form-control"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <br />
+                <div class="mb-3 row">
+                  <div class="col-sm-12">
+                    <button
+                      type="submit"
+                      class="btn submit-btn"
+                      style="width: 80%"
+                      id="addEMRB"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card text-center custom-card shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title register-text">View EMR</h5>
+              <hr />
+              <form method="GET" id="viewEMRF">
+                <br />
+                <br />
+                <div class="mb-3 row">
+                  <label for="emrID" class="col-sm-4 col-form-label form-label"
+                    >Enter EMR ID</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="text"
+                      placeholder="Enter EMR ID"
+                      name="EMR ID"
+                      id="emrID"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <br />
+                <br />
+                <div class="mb-3 row">
+                  <label for="email" class="col-sm-4 col-form-label form-label"
+                    >Doctor Email-id</label
+                  >
+                  <div class="col-sm-8">
+                    <input
+                      type="email"
+                      placeholder="Enter doctor email"
+                      name="doctorEmail"
+                      id="doctorEmail"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <br />
+                <br />
+
+                <div class="mb-3 row">
+                  <div class="col-sm-12">
+                    <button
+                      type="submit"
+                      class="btn submit-btn"
+                      style="width: 80%"
+                      id="viewEMRB"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" id="viewEMRDiv">
+          <div class="card text-center custom-card shadow h-100">
+            <div class="card-body">
+              <h5 class="card-title register-text">Your EMR</h5>
+              <hr />
+              <div id="viewEMRDiv">
+                <textarea
+                  style="display: none"
+                  name="emrcontent"
+                  placeholder="After you click submit the button EMR will appear here"
+                  id="emrdataDoctor"
+                >
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <hr />
+    <br />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
