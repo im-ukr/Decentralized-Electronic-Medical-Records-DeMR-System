@@ -1,6 +1,6 @@
 # Decentralized Electronic Medical Record (DeMR) System using Hyperledger Fabric
 
-The contents of this README.md file as per the following headers:<br><br>
+The content of this README.md file as per the following headers:<br><br>
 <b>A. Introduction <br>
 B. Installation <br>
 C. Set-up <br>
