@@ -100,7 +100,7 @@ To close the project, stop the backend as well as frontend terminal and execute 
    ```bash
    ./network.sh down
    ```
-For running again, execute the following commands only as per their respective directories as mentioned above:
+For running again, execute the following commands only as per their respective directories (mentioned earlier):
    ```bash
    ./network.sh up createChannel -ca -s couchdb
    ./deploymentScript.sh
