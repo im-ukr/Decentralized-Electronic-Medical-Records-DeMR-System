@@ -9,8 +9,7 @@ E. Version Used <br></b>
 
 ## A. Introduction
 
-Our project is a big step forward because it integrates the cutting-edge idea of blockchain into Electronic Health Records (EHRs). To improve patient data security and confidentiality, blockchain integration is the main goal. Blockchain uses a decentralized mechanism to store data, making it extremely safe and impenetrable. This method guarantees that patient data is secure and unaffected by unauthorized changes.
-
+This project marks a significant advancement by successfully integrating blockchain technology into Electronic Health Records (EHRs). The primary objective is to enhance the security and privacy of patient data through blockchain’s decentralized structure, ensuring data integrity and protection against unauthorized modifications.
 This repository provides the necessary scripts and configurations for establishing a Hyperledger Fabric network and deploying chaincode.
 
 ## B. Installation
