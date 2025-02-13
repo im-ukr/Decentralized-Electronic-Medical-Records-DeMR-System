@@ -92,7 +92,7 @@ The following installations are preferred:
 
    Open a new terminal and run these commands:
    ```bash
-   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontened-combined
+   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontend
    python3 -m http.server
    ```
 
@@ -113,7 +113,7 @@ For running again, execute the following commands only as per their respective d
    ```
 To view frontend, open a new terminal and run these commands:
    ```bash
-   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontened-combined
+   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontend
    python3 -m http.server
    ```
 ## E. Used:
