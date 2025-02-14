@@ -71,7 +71,7 @@ The following installations are preferred:
    peer version
    ```
 
-6. **After the successful execution of step 3, navigate to the backend-combined directory:**
+6. **After successful execution of step 3, navigate to the backend-combined directory:**
 
    ```bash
    cd backend-combined
