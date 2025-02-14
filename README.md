@@ -106,6 +106,9 @@ For running again, execute the following commands only as per their respective d
    ./deploymentScript.sh
    ```
    ```bash
+   cd backend-combined
+   ```
+   ```bash
    node enrollAdmin.js
    node registerUser.js
    node app.js
