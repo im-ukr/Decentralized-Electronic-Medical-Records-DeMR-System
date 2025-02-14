@@ -459,7 +459,7 @@ function networkDown() {
 
     if [ -d "$WALLET_PATH" ]; then
       rm -rf "$WALLET_PATH"
-      echo "✅ Successfully Deleted the backend-combined/wallet"
+      echo "✅ Successfully Deleted backend-combined/wallet"
     else
       echo "Skipping wallet deletion as it is not created yet."
     fi
