@@ -453,8 +453,16 @@ function networkDown() {
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf addOrg3/fabric-ca/org3/msp addOrg3/fabric-ca/org3/tls-cert.pem addOrg3/fabric-ca/org3/ca-cert.pem addOrg3/fabric-ca/org3/IssuerPublicKey addOrg3/fabric-ca/org3/IssuerRevocationPublicKey addOrg3/fabric-ca/org3/fabric-ca-server.db'
     # remove channel and script artifacts
     ${CONTAINER_CLI} run --rm -v "$(pwd):/data" busybox sh -c 'cd /data && rm -rf channel-artifacts log.txt *.tar.gz'
-    rm -rf ~/BT-Project/EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/backend-combined/wallet
-    infoln "Deleted the wallet folder in backend-combined"
+    
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    WALLET_PATH="$SCRIPT_DIR/backend-combined/wallet"
+
+    if [ -d "$WALLET_PATH" ]; then
+      rm -rf "$WALLET_PATH"
+      echo "✅ Successfully Deleted the backend-combined/wallet"
+    else
+      echo "Skipping wallet deletion as it is not created yet."
+    fi
   fi
 }
 
