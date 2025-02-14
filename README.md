@@ -1,7 +1,7 @@
 # Decentralized Electronic Medical Record (DeMR) System using Hyperledger Fabric
 
 ![HomePage](https://i.imgur.com/cHq53p6.png)
-
+You can view the UI preview ![here](https://im-ukr.github.io/Decentralized-Electronic-Medical-Records-DeMR-System/)<br>
 The content of this README.md file as per the following headers:<br><br>
 <b>A. Introduction <br>
 B. Installation <br>
