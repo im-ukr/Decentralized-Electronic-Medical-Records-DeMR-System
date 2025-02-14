@@ -29,7 +29,7 @@ The following installations are preferred:
    ```
    Navigate into the project folder:
     ```bash
-   cd EMR-Management-System-using-Hyperledger-Fabric
+   cd Decentralized-Electronic-Medical-Records-DeMR-System
    ```
    And then run these command:
     ```bash
@@ -58,11 +58,11 @@ The following installations are preferred:
    ```
    Note where the peer binary is located using following command, **MODIIFY it according to the project location within your system.**
    ```bash
-   find ~/BT-Project/EMR-Management-System-using-Hyperledger-Fabric -name peer
+   find ~/BT-Project/Decentralized-Electronic-Medical-Records-DeMR-System -name peer
    ```
    Export it to the path based on the location, for example:
    ```bash
-   export PATH=$PATH:/home/im-ukr/BT-Project/EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/fabric-samples/bin
+   export PATH=$PATH:/home/im-ukr/BT-Project/Decentralized-Electronic-Medical-Records-DeMR-System/fabric-samples/test-network/fabric-samples/bin
    ```
    Verify the peer version:
    ```bash
@@ -91,7 +91,7 @@ The following installations are preferred:
 
    Open a new terminal and run these commands:
    ```bash
-   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontend
+   cd Decentralized-Electronic-Medical-Records-DeMR-System/fabric-samples/test-network/frontend
    python3 -m http.server
    ```
 
@@ -112,7 +112,7 @@ For running again, execute the following commands only as per their respective d
    ```
 To view frontend, open a new terminal and run these commands:
    ```bash
-   cd EMR-Management-System-using-Hyperledger-Fabric/fabric-samples/test-network/frontend
+   cd Decentralized-Electronic-Medical-Records-DeMR-System/fabric-samples/test-network/frontend
    python3 -m http.server
    ```
 ## E. Used:
