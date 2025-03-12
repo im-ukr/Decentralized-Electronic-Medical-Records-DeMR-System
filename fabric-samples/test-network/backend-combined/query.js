@@ -202,7 +202,7 @@ async function patient_revokeViewAccess(userEmail, viewerEmail, emrID) {
       viewerEmail,
       emrID
     );
-    console.error(`patient_addEMR: Failed transaction: ${error}`);
+    console.log(`Transaction successful. Result: ${result.toString()}`);
 
     await gateway.disconnect();
 
